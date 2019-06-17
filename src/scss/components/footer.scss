@@ -1,0 +1,81 @@
+// Mobile first
+.footer-site {
+  margin-top: 0;
+  background-color: $theme-bg;
+  @include theme-color("footer", "background-color");
+
+  a {
+    @include theme-contrast-color("footer", "color");
+  }
+
+  // Don't add underlines when hovering over the government logos
+  .container .footer-govt-logo a:hover {
+    text-decoration: none;
+  }
+}
+
+// Horizontal divider line
+.footer-site-divider {
+  border-color: 1px solid $theme-bg-lighter;
+  @include theme-contrast-color("footer", "border-color");
+  opacity: 0.2;
+  margin-top: $navbar-padding-y * 3;
+  margin-bottom: $navbar-padding-y * 3;
+}
+
+.footer-site .footer-social-links .fa {
+  font-size: $font-size-lg;
+
+  &:hover {
+    opacity: 0.8;
+    text-decoration: none;
+  }
+}
+
+// Facebook, Twitter links etc
+.footer-social-links {
+  a {
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+// Government logo and copyright
+.footer-govt-logo {
+  align-items: center;
+
+  a {
+    margin-bottom: $spacer;
+  }
+}
+
+// Little divider line between CWP logo an NZ Govt logo
+.footer-brand-secondary {
+  margin-right: $spacer * 1.4;
+
+  &::after {
+    content: "";
+    width: 0;
+    height: 100%;
+    position: absolute;
+    border-left: 1px solid $theme-bg-lighter;
+    @include theme-contrast-color("footer", "border-color");
+    opacity: 0.2;
+    margin-left: $spacer;
+    top: -6px;
+  }
+}
+
+// Desktop only
+@include media-breakpoint-up(md) {
+  .footer-site-divider {
+    display: none;
+  }
+
+  .footer-govt-logo {
+    margin-top: $navbar-padding-y * 6;
+  }
+}
