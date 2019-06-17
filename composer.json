@@ -1,18 +1,11 @@
 {
-  "name": "cwp/watea-theme",
-  "description": "CWP Watea theme",
+  "name": "silverstripeltd/bambusa-theme",
+  "description": "SilverStripe Bambusa theme",
   "type": "silverstripe-theme",
-  "keywords": ["silverstripe", "theme", "cwp"],
+  "keywords": ["silverstripe", "theme", "bambusa"],
   "license": "BSD-3-Clause",
-  "require": {
-    "cwp/starter-theme": "^3.0@dev",
-    "cwp/agency-extensions": "^2.0"
-  },
   "extra": {
-    "installer-name": "watea",
-    "branch-alias": {
-      "dev-master": "3.x-dev"
-    },
+    "installer-name": "bambusa",
     "expose": [
       "dist",
       "ico",
