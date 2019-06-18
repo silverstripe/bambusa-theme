@@ -12,6 +12,9 @@
       "images"
     ]
   },
+  "require": {
+  	"cwp/starter-theme": "^3.0.0"
+  },
   "minimum-stability": "dev",
   "prefer-stable": true
 }
