@@ -5,7 +5,7 @@
 // Load Bootstrap functions as these are required for variables.
 @import "../../../starter/node_modules/bootstrap/scss/functions";
 
-// Watea theme specific variables and overrides
+// Bambusa theme specific variables and overrides
 @import "./variables";
 
 // Starter theme specific variables and overrides
@@ -73,10 +73,10 @@
 @import "../../../starter/src/scss/components/buttons";
 
 
-// Watea theme mixins
+// Bambusa theme mixins
 @import "./utils/mixins";
 
-// Watea theme styles
+// Bambusa theme styles
 @import "./typography";
 @import "./components/carousel";
 @import "./components/footer";

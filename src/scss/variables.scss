@@ -44,7 +44,7 @@ $yellow:  #ffc107 !default;
 $green:   #008a00 !default; // Original: #28a745 !default;
 $teal:    #00837a !default; // Original: #20c997 !default;
 $cyan:    #008489 !default; // Original: #17a2b8 !default;
-// Custom variables for the Watea theme
+// Custom variables for the Bambusa theme
 $lgtblue: #214350 !default;
 $drkblue: #001F2C !default;
 $lgtgrey: #eaeaea !default;
@@ -67,9 +67,9 @@ $colors: map-merge(
     "white":      $white,
     "gray":       $gray-600,
     "gray-dark":  $gray-800,
-    // Custom variables specifically for the Watea theme
-    "watea-dark":  $drkblue,
-    "watea-light": $lgtblue
+    // Custom variables specifically for the Bambusa theme
+    "bambusa-dark":  $drkblue,
+    "bambusa-light": $lgtblue
     // End custom variables
   ),
     $colors
@@ -84,7 +84,7 @@ $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-800 !default;
 
-// Custom variables for the Watea theme's colour picker functionality
+// Custom variables for the bambusa theme's colour picker functionality
 $theme-bg-lighter:    $lgtblue !default;
 $theme-bg:            $drkblue !default;
 // End custom variables
@@ -101,7 +101,7 @@ $theme-colors: map-merge(
     "danger":     $danger,
     "light":      $light,
     "dark":       $dark,
-    // Below: custom for "Watea plus" colour picker functionality
+    // Below: custom for "bambusa plus" colour picker functionality
     "theme-bg":         $theme-bg,
     "theme-bg-lighter": $theme-bg-lighter
     // End custom variables
