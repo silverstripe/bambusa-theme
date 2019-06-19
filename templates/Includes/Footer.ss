@@ -33,27 +33,6 @@
         <small class="col-auto order-2 pb-3">&copy; $CurrentDatetime.Format(Y) $SiteConfig.Title</small>
 
         <div class="col-auto order-1 order-md-3 pb-3">
-            <a class="footer-brand-secondary"
-                <% if $SiteConfig.FooterLogoSecondaryLink %>
-                    href="$SiteConfig.FooterLogoSecondaryLink">
-                <% else %>
-                    href="http://cwp.govt.nz/">
-                <% end_if %>
-
-                <img
-                    <% if $SiteConfig.FooterLogoSecondary %>
-                        src="$SiteConfig.FooterLogoSecondary.URL"
-                    <% else %>
-                        src="$resourceURL('themes/bambusa/images/cwp-logo.png')"
-                    <% end_if %>
-
-                    <% if $SiteConfig.FooterLogoSecondaryDescription %>
-                        alt="$SiteConfig.FooterLogoSecondaryDescription"
-                    <% else %>
-                        alt="<%t CWP.Footer.AgencyAlt "Powered by New Zealand Government Common Web Platform" %>"
-                    <% end_if %>
-                />
-            </a>
             <a class="footer-nzgovt-logo col-auto"
                 <% if $SiteConfig.FooterLogoLink %>
                     href="$SiteConfig.FooterLogoLink">
@@ -65,7 +44,7 @@
                     <% if $SiteConfig.FooterLogo %>
                         src="$SiteConfig.FooterLogo.URL"
                     <% else %>
-                        src="$resourceURL('themes/bambusa/images/newzealand-government-footer.png')"
+                        src="$resourceURL('themes/bambusa/dist/images/silverstripe-logo-footer.png')"
                     <% end_if %>
 
                     <% if $SiteConfig.FooterLogoDescription %>

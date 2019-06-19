@@ -3,10 +3,16 @@
   @include theme-color("nav", "background-color");
 
   .navbar-nav .nav-link {
-    color: $gray-400;
+    color: $gray-600;
+
+    padding-bottom: 26px;
+
+    &:first-child {
+      padding-left: 0;
+    }
 
     &:hover {
-      color: $white;
+      color: $gray-600;
     }
   }
 
@@ -28,6 +34,16 @@
     }
   }
 
+  .navbar-nav {
+    line-height: 19px;
+  }
+
+  .navbar-nav > .current > a {
+    background-color: unset;
+    font-weight: bolder !important;
+    color: $lgtblue !important;
+  }
+
   .navbar-nav > li > a {
     @include theme-contrast-color("nav", "color", $gray-400);
 
@@ -37,16 +53,14 @@
   }
 
   .nav-item.current > a {
-    background-color: $primary;
+    color: $lgtblue;
     @include theme-color("accent", "background-color");
     @include theme-contrast-color("accent", "color");
 
     &:focus,
     &:hover {
-      background-color: $primary;
       @include theme-color("accent", "background-color");
       @include theme-contrast-color("accent", "color");
-      color: $white;
     }
   }
 
@@ -64,6 +78,7 @@
     &:hover .navbar-touch-caret,
     &:focus .navbar-touch-caret {
       background-color: transparent;
+      padding: 0.8rem;
     }
 
     // When active
@@ -71,13 +86,13 @@
       .navbar-touch-caret,
       &:hover .navbar-touch-caret,
       &:focus .navbar-touch-caret {
-        background: $primary;
-        @include theme-color("accent", "background-color");
-        @include theme-contrast-color("accent", "color");
+        background-color: unset;
+        padding: 0.8rem;
 
         &:hover,
         &:focus {
-          background-color: $primary;
+          background-color: unset;
+          padding: 0.8rem;
           @include theme-color("accent", "background-color");
         }
       }
@@ -268,6 +283,7 @@
     // Requires further nesting
     .navbar-nav > .nav-item {
       margin-bottom: -$nav-hover-border-width;
+      margin-right: 28px;
     }
 
     // 1st level with dropdown

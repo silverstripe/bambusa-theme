@@ -1,7 +1,8 @@
 // Mobile first
 .footer-site {
+  color: $white;
   margin-top: 0;
-  background-color: $theme-bg;
+  background-color: $charcoal;
   @include theme-color("footer", "background-color");
 
   a {

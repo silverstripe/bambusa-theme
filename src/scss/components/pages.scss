@@ -57,11 +57,17 @@
   text-align: left;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .page-header {
-  padding-bottom: 0.6rem;
   margin: $line-height-computed 0 1.6rem;
   border-bottom: 0;
-
+  background-color: $lgtblue;
+  color: $white;
+  margin: 0 -9999rem 50px;
+  padding: 3.5rem 9999rem;
 
   h1,
   .h1,
@@ -70,6 +76,7 @@
   h3,
   .h3 {
     margin-bottom: ($line-height-computed / 3);
+    color: $white;
   }
 }
 
@@ -253,5 +260,25 @@
 
   &__title {
     margin-bottom: 0.6rem;
+  }
+}
+
+.breadcrumb {
+  font-size: 12px;
+  line-height: 14px;
+  background-color: unset;
+
+  > .breadcrumb-item {
+    a {
+      color: $white;
+    }
+
+    &.active {
+      color: $white;
+
+      &::before {
+        color: $white;
+      }
+    }
   }
 }

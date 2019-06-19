@@ -10,6 +10,20 @@
         <% end_if %>
         <% require themedCss('dist/css/main.css') %>
         <% include Favicon %>
+        <style>
+            @font-face {
+                font-family: 'Metropolis';
+                font-style: normal;
+                font-weight: normal;
+                src: local('Metropolis'), url('resources/themes/bambusa/dist/fonts/Metropolis-Regular.otf') format('opentype');
+            }
+            @font-face {
+                font-family: 'Metropolis';
+                font-style: normal;
+                font-weight: bold;
+                src: local('Metropolis'), url('resources/themes/bambusa/dist/fonts/Metropolis-SemiBold.otf') format('opentype');
+            }
+        </style>
     </head>
     <body class="$ClassName
         <% if $SiteConfig.MainFontFamily %>theme-font-{$SiteConfig.MainFontFamily}<% end_if %>

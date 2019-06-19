@@ -9,6 +9,8 @@ body > header {
 }
 
 .site-header {
+  padding-bottom: 10px;
+
   @include theme-contrast-color("header", "color");
 
   a {
@@ -147,6 +149,14 @@ body > header {
   }
 }
 
+.site-header-brand a {
+  color: $lgtblue;
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: -1.2px;
+  line-height: 41px;
+}
+
 // Branding dimension restrictions
 .site-header-brand img {
   max-height: $line-height-computed * 6;
@@ -165,7 +175,7 @@ body > header {
 // Site header
 @include media-breakpoint-down(md) {
   .site-header {
-    min-height: 111px;
+    min-height: 93px;
 
     .site-header-brand {
       max-width: 19rem;
