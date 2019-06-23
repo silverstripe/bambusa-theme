@@ -16672,6 +16672,9 @@ body.theme-accent-white .site-header-search .btn[type=submit]:active:hover, body
   letter-spacing: -1.2px;
   line-height: 41px;
 }
+.site-header-brand a:hover {
+  color: #0049D6;
+}
 
 .site-header-brand img {
   max-height: 6rem;
@@ -16863,6 +16866,9 @@ body.theme-nav-white .main-nav .navbar, body.theme-nav-light-grey .main-nav .nav
   background-color: unset;
   font-weight: bolder !important;
   color: #0049D6 !important;
+}
+.main-nav .navbar-nav > .current > a:hover {
+  background-color: unset;
 }
 body.theme-nav-red .main-nav .navbar-nav > li > a {
   color: #ced4da;
