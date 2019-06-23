@@ -44,7 +44,7 @@
                     <% if $SiteConfig.FooterLogo %>
                         src="$SiteConfig.FooterLogo.URL"
                     <% else %>
-                        src="$resourceURL('themes/bambusa/dist/images/silverstripe-logo-footer.png')"
+                        src="$resourceURL('themes/bambusa/images/silverstripe-logo-footer.png')"
                     <% end_if %>
 
                     <% if $SiteConfig.FooterLogoDescription %>
