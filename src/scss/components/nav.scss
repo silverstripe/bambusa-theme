@@ -42,6 +42,10 @@
     background-color: unset;
     font-weight: bolder !important;
     color: $lgtblue !important;
+
+    &:hover {
+      background-color: unset;
+    }
   }
 
   .navbar-nav > li > a {
