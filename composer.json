@@ -9,7 +9,8 @@
     "expose": [
       "dist",
       "ico",
-      "images"
+      "images",
+      "css"
     ]
   },
   "require": {
