@@ -1,4 +1,4 @@
-<% include Carousel %>
+<% if $HeaderElements %>$HeaderElements<% end_if %>
 <div class="home-page">
     <div class="container">
         <div class="row">
