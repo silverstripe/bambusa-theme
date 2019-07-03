@@ -17,19 +17,20 @@ before_script:
 
   # Install node
   - nvm install "$TRAVIS_NODE_VERSION"
+  - npm install -g yarn;
 
-  # Shift the starter theme to a sibling directory of the current (required for npm run build to work)
+  # Shift the starter theme to a sibling directory of the current (required for yarn run build to work)
   # Note that if Behat or other functional tests are required in future, we'll need to install a CWP installer
   # project and copy the current working bambusa dir (installed by Travis) into `themes/bambusa` instead of doing this.
   - mv themes/starter ../
-  - (cd ../starter && npm install --silent)
-  - npm install --silent
+  - (cd ../starter && yarn install --silent)
+  - yarn install --silent
 
 script:
   # Linting
-  - npm run lint-js
-  - npm run lint-sass
+  - yarn run lint-js
+  - yarn run lint-sass
   # Check that dist files are built correctly
-  - npm run package
+  - yarn run package
   - git diff-files --quiet -w --relative=dist
   - git diff --name-status --relative=dist
