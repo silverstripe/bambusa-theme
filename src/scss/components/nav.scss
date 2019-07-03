@@ -38,10 +38,10 @@
     line-height: 19px;
   }
 
-  .navbar-nav > .current > a {
+  .navbar .navbar-nav > .current > a {
     background-color: unset;
-    font-weight: bolder !important;
-    color: $lgtblue !important;
+    font-weight: bolder;
+    color: $lgtblue;
 
     &:hover {
       background-color: unset;
