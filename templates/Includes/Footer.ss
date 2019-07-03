@@ -1,15 +1,18 @@
 <div class="container">
     <div class="row justify-content-between">
-        <% if $Footer.Children %>
-            <nav class="footer-nav-links col-auto order-2" aria-label="Footer navigation">
-                <% loop $Footer.Children %>
-                    <a href="$Link" class="$LinkingMode <% if $LinkingMode = current %> active<% end_if %>">
-                        $MenuTitle.XML
-                    </a>
-                <% end_loop %>
-            </nav>
-        <% end_if %>
-
+        <% with $MenuSet('Footer') %>
+            <% cached 'FooterMenuSet', $LastEdited, $MenuItems.max('LastEdited'), $MenuItems.count %>
+                <% if $MenuItems %>
+                    <nav class="footer-nav-links col-auto order-2" aria-label="Footer navigation">
+                        <% loop $MenuItems %>
+                            <a href="$Link" class="$LinkingMode <% if $LinkingMode = current %> active<% end_if %>">
+                                $MenuTitle.XML
+                            </a>
+                        <% end_loop %>
+                    </nav>
+                <% end_if %>
+            <% end_cached %>
+        <% end_with %>
         <% if $SiteConfig.FacebookURL || $SiteConfig.TwitterUsername %>
             <div class="footer-social-links col-auto order-1 order-md-3" role="complementary">
                 <% if $SiteConfig.FacebookURL %>

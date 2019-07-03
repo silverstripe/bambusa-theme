@@ -6,6 +6,7 @@
   @include theme-color("footer", "background-color");
 
   a {
+    color: $white;
     @include theme-contrast-color("footer", "color");
   }
 
