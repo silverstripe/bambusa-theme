@@ -44,6 +44,9 @@
         <footer class="footer-site">
             <% include Footer %>
         </footer>
+
+        $ModalWindow
+
         <% require javascript('//code.jquery.com/jquery-3.3.1.min.js') %>
         <% require javascript('themes/starter/dist/js/main.js') %>
         <% require javascript('themes/bambusa/dist/js/main.js') %>
