@@ -24,10 +24,10 @@
 
                   <%-- Play or Pause --%>
                   <div class="carousel-play-controls">
-                    <button type="button" class="btn btn-link btn-sm" id="carousel-pause" aria-label="Autoplaying carousel with slides. <%t CwpCarousel.PAUSESLIDE "Click to pause carousel slides." %>">
+                    <button type="button" class="btn btn-link btn-sm" id="carousel-pause" aria-label="Autoplaying carousel with slides. <%t SilverStripe\Bambusa\Blocks\CarouselBlock.PAUSESLIDE "Click to pause carousel slides." %>">
                       <i class="fa fa-pause" aria-hidden="true"></i>
                     </button>
-                    <button type="button" class="btn btn-link btn-sm" id="carousel-play" aria-label="Paused carousel with slides. <%t CwpCarousel.PLAYSLIDE "Click to play carousel slides." %>" style="display:none;">
+                    <button type="button" class="btn btn-link btn-sm" id="carousel-play" aria-label="Paused carousel with slides. <%t SilverStripe\Bambusa\Blocks\CarouselBlock.PLAYSLIDE "Click to play carousel slides." %>" style="display:none;">
                       <i class="fa fa-play" aria-hidden="true"></i>
                     </button>
                   </div>
@@ -39,11 +39,11 @@
             <div class="carousel-controls">
               <button class="carousel-item-left carousel-control-prev" href="#carousel-slide" data-slide="prev">
                 <i class="fa fa-angle-left" aria-hidden="true"></i>
-                <span class="sr-only"><%t CwpCarousel.PREVIOUS "Go to previous slide." %></span>
+                <span class="sr-only"><%t SilverStripe\Bambusa\Blocks\CarouselBlock.PREVIOUS "Go to previous slide." %></span>
               </button>
               <button class="carousel-item-right carousel-control-next" href="#carousel-slide" data-slide="next">
                 <i class="fa fa-angle-right" aria-hidden="true"></i>
-                <span class="sr-only"><%t CwpCarousel.NEXT "Go to next slide." %></span>
+                <span class="sr-only"><%t SilverStripe\Bambusa\Blocks\CarouselBlock.NEXT "Go to next slide." %></span>
               </button>
             </div>
 
@@ -93,6 +93,6 @@
           <% end_loop %>
       </div>
       <%-- Announce end of carousel for screen readers --%>
-      <div tabindex="0" class="sr-only"><%t CwpCarousel.ENDOFCAROUSEL "End of carousel." %></div>
+      <div tabindex="0" class="sr-only"><%t SilverStripe\Bambusa\Blocks\CarouselBlock.ENDOFCAROUSEL "End of carousel." %></div>
     </div>
 <% end_if %>
