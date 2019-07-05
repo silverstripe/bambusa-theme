@@ -5,7 +5,7 @@
                 <% if $MenuItems %>
                     <nav class="footer-nav-links col-auto order-2" aria-label="Footer navigation">
                         <% loop $MenuItems %>
-                            <a href="$Link" class="$LinkingMode <% if $LinkingMode = current %> active<% end_if %>">
+                            <a href="$Link" class="$LinkingMode <% if $LinkingMode = current %> active<% end_if %>"<% if $IsNewWindow %> target="_blank"<% end_if %>>
                                 $MenuTitle.XML
                             </a>
                         <% end_loop %>
