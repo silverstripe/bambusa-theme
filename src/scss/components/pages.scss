@@ -64,7 +64,8 @@ body {
 .page-header {
   margin: $line-height-computed 0 1.6rem;
   border-bottom: 0;
-  background-color: $lgtblue;
+  background-color: $primary;
+  @include theme-color("accent", "background-color");
   color: $white;
   margin: 0 -9999rem 50px;
   padding: 3.5rem 9999rem;

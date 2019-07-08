@@ -9,7 +9,7 @@ body > header {
 }
 
 .site-header {
-  padding-bottom: 10px;
+  padding-bottom: 0;
 
   @include theme-contrast-color("header", "color");
 
@@ -150,14 +150,16 @@ body > header {
 }
 
 .site-header-brand a {
-  color: $lgtblue;
+  color: $primary;
+  @include theme-color("accent", "color");
   font-size: 32px;
   font-weight: 900;
   letter-spacing: -1.2px;
   line-height: 41px;
 
   &:hover {
-    color: $lgtblue;
+    color: $primary;
+    @include theme-color("accent", "color");
   }
 }
 

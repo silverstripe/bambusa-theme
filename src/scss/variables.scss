@@ -70,13 +70,15 @@ $colors: map-merge(
     "gray-dark":  $gray-800,
     // Custom variables specifically for the Bambusa theme
     "bambusa-dark":  $drkblue,
-    "bambusa-light": $lgtblue
+    "bambusa-light": $lgtblue,
+    "default-accent": $lgtblue,
+    "default-background": $lgtblue,
     // End custom variables
   ),
     $colors
 );
 
-$primary:       $blue !default;
+$primary:       $lgtblue !default;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;
@@ -289,7 +291,7 @@ $embed-responsive-aspect-ratios: join(
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      Metropolis, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-sans-serif:      Metropolis !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:            $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
