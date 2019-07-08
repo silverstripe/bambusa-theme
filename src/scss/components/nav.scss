@@ -337,6 +337,32 @@
   }
 }
 
+.main {
+  .tags-list {
+    display: flex;
+    justify-content: center;
+  }
+
+  .tags-list__tag-item {
+    margin: 0.5rem;
+  }
+
+  .tags-list__tag-link {
+    color: white;
+    text-transform: uppercase;
+    padding: 0.2rem 0.5rem;
+    text-decoration: none;
+    font-size: 0.8rem;
+    background: $primary;
+    border-radius: 5px;
+
+    &:hover,
+    &--current {
+      background: lighten($primary, 10);
+    }
+  }
+}
+
 // Desktop only: add menu item hover colour for sub-navigations
 @include media-breakpoint-up(md) {
   .navbar-nav {
