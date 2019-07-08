@@ -15,13 +15,13 @@
                 font-family: 'Metropolis';
                 font-style: normal;
                 font-weight: normal;
-                src: local('Metropolis'), url('resources/themes/bambusa/dist/fonts/Metropolis-Regular.woff') format('woff'), url('resources/themes/bambusa/dist/fonts/Metropolis-Regular.woff2') format('woff2');
+                src: local('Metropolis'), url('$resourceURL(themes/bambusa/dist/fonts/Metropolis-Regular.woff)') format('woff'), url('$resourceURL(themes/bambusa/dist/fonts/Metropolis-Regular.woff)') format('woff2');
             }
             @font-face {
                 font-family: 'Metropolis';
                 font-style: normal;
                 font-weight: bold;
-                src: local('Metropolis'), url('resources/themes/bambusa/dist/fonts/Metropolis-SemiBold.woff') format('woff'), url('resources/themes/bambusa/dist/fonts/Metropolis-SemiBold.woff2') format('woff2');
+                src: local('Metropolis'), url('$resourceURL(themes/bambusa/dist/fonts/Metropolis-SemiBold.woff)') format('woff'), url('$resourceURL(themes/bambusa/dist/fonts/Metropolis-SemiBold.woff2)') format('woff2');
             }
         </style>
     </head>
