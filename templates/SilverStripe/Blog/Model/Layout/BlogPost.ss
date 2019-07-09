@@ -25,8 +25,9 @@
               $CommentsForm
             </article>
         </section>
-
-      <% include SilverStripe\\Blog\\BlogSideBar BlogPage=$Parent %>
+        <aside class="col-lg-3 offset-lg-1">
+          <% include SilverStripe\\Blog\\BlogSideBar BlogPage=$Parent %>
+        </aside>
     </div>
 </div>
 <% include PageUtilities %>
