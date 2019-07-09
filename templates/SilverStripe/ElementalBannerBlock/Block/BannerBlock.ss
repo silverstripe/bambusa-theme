@@ -10,7 +10,7 @@
         <h2 class="banner-element__title">$Title</h2>
     <% end_if %>
 
-    $Content.RichLinks
+    $Content
 
     <%-- Add a CallToActionLink if available --%>
     <% if $CallToActionLink.Page.Link %>
