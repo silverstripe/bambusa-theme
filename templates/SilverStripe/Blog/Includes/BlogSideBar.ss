@@ -1,5 +1,5 @@
 <nav role="navigation" class="page-sidebar-widget page-sidebar-nav">
-  <p class="text-center"><span class="font-icon-rss"></span><a href="$BlogPage.Link('rss')">Subscribe to RSS</a></p>
+  <p class="text-center"><span class="font-icon-rss"></span><a href="$BlogPage.Link('rss')"><%t Bambusa.RSS "Subscribe to RSS" %></a></p>
   <% if $BlogPage.Categories %>
       <h3 class="h4 page-sidebar-header"><%t Bambusa.CATEGORIES "Browse by category" %></h3>
       <ul class="list-unstyled">
