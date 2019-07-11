@@ -3,3 +3,5 @@ en:
     CATEGORIES: 'Browse by category'
     TAGS: 'Browse by tag'
     RSS: 'Subscribe to RSS'
+    GOTOCATEGORY: 'Go to the &quot;{category}&quot; category'
+    GOTOTAG: 'Go to the &quot;{tag}&quot; tag'
