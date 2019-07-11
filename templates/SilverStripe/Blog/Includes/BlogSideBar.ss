@@ -17,19 +17,6 @@
             <li class="tags-list__tag-item <% if $Up.BlogPage.CurrentTag.ID == $ID %>current<% end_if %>">
                 <a href="$Link" class="tags-list__tag-link <% if $Up.BlogPage.CurrentTag.ID == $ID %>tags-list__tag-link--current<% end_if %>">$Title</a>
             </li>
-            <li class="tags-list__tag-item <% if $Up.BlogPage.CurrentTag.ID == $ID %>current<% end_if %>">
-                <a href="$Link" class="tags-list__tag-link <% if $Up.BlogPage.CurrentTag.ID == $ID %>tags-list__tag-link--current<% end_if %>">$Title</a>
-            </li>
-            <li class="tags-list__tag-item <% if $Up.BlogPage.CurrentTag.ID == $ID %>current<% end_if %>">
-                <a href="$Link" class="tags-list__tag-link <% if $Up.BlogPage.CurrentTag.ID == $ID %>tags-list__tag-link--current<% end_if %>">$Title</a>
-            </li>
-            <li class="tags-list__tag-item <% if $Up.BlogPage.CurrentTag.ID == $ID %>current<% end_if %>">
-                <a href="$Link" class="tags-list__tag-link <% if $Up.BlogPage.CurrentTag.ID == $ID %>tags-list__tag-link--current<% end_if %>">$Title</a>
-            </li>
-            <li class="tags-list__tag-item <% if $Up.BlogPage.CurrentTag.ID == $ID %>current<% end_if %>">
-                <a href="$Link" class="tags-list__tag-link <% if $Up.BlogPage.CurrentTag.ID == $ID %>tags-list__tag-link--current<% end_if %>">$Title</a>
-            </li>
-
         <% end_loop %>
 
       </ul>
