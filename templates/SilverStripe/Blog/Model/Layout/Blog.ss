@@ -1,5 +1,5 @@
 <div class="container">
-    <% include SilverStripe\\Bambusa\\Pages\\PageHeader %>
+    <% include SilverStripe\\Bambusa\\Pages\\PageHeader HasSidebar=1 %>
     <div class="row">
         <section class="col-lg-8">
             <div class="blog-main" role="main">

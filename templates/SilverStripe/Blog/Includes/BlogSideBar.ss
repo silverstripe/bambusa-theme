@@ -1,5 +1,4 @@
 <nav role="navigation" class="page-sidebar-widget page-sidebar-nav">
-  <p class="text-center"><a title="<%t Bambusa.RSS "Subscribe to RSS" %>" href="$BlogPage.Link('rss')"><%t Bambusa.RSS "Subscribe to RSS" %></a></p>
   <% if $BlogPage.Categories %>
       <h3 class="h4 page-sidebar-header"><%t Bambusa.CATEGORIES "Browse by category" %></h3>
       <ul class="list-unstyled">
@@ -21,5 +20,6 @@
 
       </ul>
   <% end_if %>
+  <p><a title="<%t Bambusa.RSS "Subscribe to RSS" %>" href="$BlogPage.Link('rss')"><%t Bambusa.RSS "Subscribe to RSS" %></a></p>
 
 </nav>
