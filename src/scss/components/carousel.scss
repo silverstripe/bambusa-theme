@@ -1,6 +1,4 @@
 .carousel {
-  // The navbar has a 1px border on the bottom, so adding it to the margin
-  margin-top: -$line-height-computed + .4rem;
   margin-bottom: $jumbotron-padding * 2;
   border-bottom: 1px solid $gray-300;
 
@@ -40,21 +38,6 @@
       p,
       a:not(.btn) {
         color: $carousel-caption-color;
-        // Add text shadow to all text if there is an image
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-      }
-
-      .btn {
-        text-shadow: none;
-      }
-
-      .btn-link {
-        color: $carousel-caption-color;
-        border-color: $carousel-control-color;
-
-        &:hover {
-          border-color: darken($carousel-control-color, 20%);
-        }
       }
     }
 
@@ -65,19 +48,6 @@
 
       @include media-breakpoint-down(sm) {
         margin-bottom: floor($line-height-computed * 0.45);
-      }
-    }
-
-    .btn-link {
-      position: relative;
-      border: 1px solid lighten($primary, 20%);
-      @include theme-color("accent", "border-color");
-      @include theme-contrast-color("carousel", "color");
-      transition: unset;
-
-      &:hover {
-        border-color: lighten($primary, 40%);
-        @include theme-color("accent", "border-color", "lighten", 20%);
       }
     }
   }
@@ -127,8 +97,8 @@
 }
 
 .carousel-controls-inner-wrapper {
-  display: inline-block;
-  background: rgba(0, 0, 0, .6);
+  display: inline-flex;
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 2rem;
 }
 
@@ -145,12 +115,12 @@
     background-image: none;
 
     .fa {
-      font-size: $jumbotron-padding * 3.2;
+      font-size: 4rem;
     }
   }
 
   &:hover {
-    background-color: rgba($gray-600, .2);
+    background-color: rgba($gray-600, 0.2);
     cursor: pointer;
   }
 
@@ -162,36 +132,52 @@
 
 // Carousel slides indicators
 .carousel-indicators {
-  display: inline-block;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  margin-left: $line-height-computed;
+  margin-right: $line-height-computed / 2;
   position: static;
-  width: auto;
-  margin: 0;
-  padding-left: 14px;
 
-  li,
-  li.active {
-    display: inline-block;
-    margin-right: 4px;
-    margin-left: 4px;
-    vertical-align: middle;
+  .active::before {
+    background-color: $carousel-caption-color;
+  }
 
-    &:hover {
-      border-color: rgba($carousel-caption-color, .8);
+  button {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    width: 36px;
+    height: 100%;
+    padding: 0;
+
+    &::before {
+      content: "";
+      background-color: rgb($carousel-caption-color, 0.5);
+      width: 100%;
+      margin: 0 3px;
+      height: 3px;
+      transition: background-color 0.6s;
+    }
+
+    &:hover::before {
+      opacity: 0.8;
     }
   }
 }
 
 // Play and pause button
 .carousel-play-controls {
-  display: inline-block;
   position: relative;
   padding-right: 6px;
 
-  .btn-link {
+  .carousel-controls {
     color: $carousel-caption-color;
 
     &:hover {
-      color: rgba($carousel-caption-color, .8);
+      color: rgba($carousel-caption-color, 0.8);
     }
   }
 }
