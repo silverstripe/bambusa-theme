@@ -10,8 +10,8 @@
     @include theme-contrast-color("footer", "color");
   }
 
-  // Don't add underlines when hovering over the government logos
-  .container .footer-govt-logo a:hover {
+  // Don't add underlines when hovering over the logos
+  .container .footer-logo a:hover {
     text-decoration: none;
   }
 }
@@ -45,29 +45,12 @@
   }
 }
 
-// Government logo and copyright
-.footer-govt-logo {
+// Logo and copyright
+.footer-logo {
   align-items: center;
 
   a {
     margin-bottom: $spacer;
-  }
-}
-
-// Little divider line between CWP logo an NZ Govt logo
-.footer-brand-secondary {
-  margin-right: $spacer * 1.4;
-
-  &::after {
-    content: "";
-    width: 0;
-    height: 100%;
-    position: absolute;
-    border-left: 1px solid $theme-bg-lighter;
-    @include theme-contrast-color("footer", "border-color");
-    opacity: 0.2;
-    margin-left: $spacer;
-    top: -6px;
   }
 }
 
@@ -77,7 +60,7 @@
     display: none;
   }
 
-  .footer-govt-logo {
+  .footer-logo {
     margin-top: $navbar-padding-y * 6;
   }
 }
