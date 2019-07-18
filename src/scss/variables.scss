@@ -190,7 +190,7 @@ $body-color:                $gray-900 !default;
 //
 // Style anchor elements.
 
-$link-color:                              #0070b7 !default; // Original: theme-color("primary") !default;
+$link-color:                              #0049D6 !default; // Original: theme-color("primary") !default;
 $link-decoration:                         none !default;
 $link-hover-color:                        darken($link-color, 5%) !default; // Original: darken($link-color, 15%) !default;
 $link-hover-decoration:                   underline !default;
@@ -201,7 +201,7 @@ $emphasized-link-hover-darken-percentage: 15% !default;
 //
 // Style p element.
 
-$paragraph-margin-bottom:   1rem !default;
+$paragraph-margin-bottom:   1.5rem !default;
 
 
 // Grid breakpoints
