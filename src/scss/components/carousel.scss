@@ -59,7 +59,7 @@
   // Increase distance between text and actions
   margin-bottom: $line-height-computed * 1.25;
   font-size: $font-size-base * 1.2;
-  font-weight: 300;
+  font-weight: $font-weight-light;
   line-height: 1.4;
 
   @include media-breakpoint-down(sm) {
@@ -100,6 +100,7 @@
   display: inline-flex;
   background: rgba(0, 0, 0, 0.6);
   border-radius: 2rem;
+  padding: 0 #{$spacer - $btn-padding-x-sm} 0 $spacer;
 }
 
 // Controls navigate left or right
@@ -115,7 +116,7 @@
     background-image: none;
 
     .fa {
-      font-size: 4rem;
+      font-size: 3.5rem;
     }
   }
 
@@ -135,35 +136,35 @@
   align-items: center;
   display: flex;
   justify-content: space-around;
-  margin-left: $line-height-computed;
+  margin-left: 0;
   margin-right: $line-height-computed / 2;
   position: static;
 
-  .active::before {
-    background-color: $carousel-caption-color;
-  }
-
-  button {
+  .carousel-indicator-button {
     display: flex;
     align-items: center;
     background-color: transparent;
     border: 0;
     border-radius: 0;
-    width: 36px;
+    width: $carousel-indicator-width;
     height: 100%;
     padding: 0;
+    @include transition($carousel-indicator-transition);
 
     &::before {
       content: "";
       background-color: rgb($carousel-caption-color, 0.5);
       width: 100%;
-      margin: 0 3px;
-      height: 3px;
-      transition: background-color 0.6s;
+      margin: 0 $carousel-indicator-spacer;
+      height: $carousel-indicator-height;
     }
 
     &:hover::before {
-      opacity: 0.8;
+      opacity: $carousel-control-hover-opacity;
+    }
+
+    &.active::before {
+      background-color: $carousel-caption-color;
     }
   }
 }
@@ -171,13 +172,12 @@
 // Play and pause button
 .carousel-play-controls {
   position: relative;
-  padding-right: 6px;
 
   .carousel-controls {
     color: $carousel-caption-color;
 
     &:hover {
-      color: rgba($carousel-caption-color, 0.8);
+      color: rgba($carousel-caption-color, $carousel-control-hover-opacity);
     }
   }
 }
