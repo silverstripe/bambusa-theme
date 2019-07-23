@@ -38,4 +38,3 @@
         <% end_if %>
     </div>
 </div>
-<% include PageUtilities %>
