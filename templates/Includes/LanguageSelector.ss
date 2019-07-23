@@ -3,7 +3,7 @@
         <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fa fa-language" aria-hidden="true"></i>
             <span class="d-none d-sm-inline-block">
-                $SelectedLanguage
+                $SelectedLanguage.LanguageNative
             </span>
             <i class="fa fa-angle-down" aria-hidden="true"></i>
         </button>
