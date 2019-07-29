@@ -32,12 +32,9 @@ export default function () {
     const $carouselControlButtons = $carousel.find('.carousel-controls button, .carousel-indicators button');
 
     $carouselControlButtons.click(() => {
-      // Set a timeout for the duration of the CSS animation that switches the slide.
-      // The new slide does not become "active" until the animation is complete.
-      setTimeout(() => {
-        const $activeSlide = $carousel.find('.carousel-item.active');
-        $carouselSlideTitle.text($activeSlide.data('title'));
-      }, 700);
+      $carousel.one('slide.bs.carousel', (event) => {
+        $carouselSlideTitle.text($(event.relatedTarget).data('title'));
+      });
     });
   });
 }
