@@ -3,7 +3,7 @@
         <% with $MenuSet('Footer') %>
             <% cached 'FooterMenuSet', $LastEdited, $MenuItems.max('LastEdited'), $MenuItems.count %>
                 <% if $MenuItems %>
-                    <nav class="footer-nav-links col-auto order-2" aria-label="Footer navigation">
+                    <nav class="footer-nav-links col-auto order-2" aria-label="<%t CWP_Theme.FOOTER 'Footer' %>" role="navigation">
                         <% loop $MenuItems %>
                             <a href="$Link" class="$LinkingMode <% if $LinkingMode = current %> active<% end_if %>"<% if $IsNewWindow %> target="_blank"<% end_if %>>
                                 $MenuTitle.XML
@@ -14,7 +14,7 @@
             <% end_cached %>
         <% end_with %>
         <% if $SiteConfig.FacebookURL || $SiteConfig.TwitterUsername %>
-            <div class="footer-social-links col-auto order-1 order-md-3" role="complementary">
+            <div class="footer-social-links col-auto order-1 order-md-3">
                 <% if $SiteConfig.FacebookURL %>
                     <a class="fa fa-facebook" href="http://www.facebook.com/$SiteConfig.FacebookURL">
                         <span class="sr-only"><%t CWP.Footer.FollowOnFacebook "Follow us on Facebook" %></span>
