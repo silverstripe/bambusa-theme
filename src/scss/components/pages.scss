@@ -102,9 +102,14 @@ body {
   margin-top: 0.4rem;
 }
 
-.page-sidebar-nav a {
-  padding: $navbar-padding-y / 2 0;
-  display: block;
+.tags-list {
+  li {
+    display: inline-block;
+  }
+
+  .badge {
+    text-decoration: none;
+  }
 }
 
 .page-sidebar-widget {
@@ -266,7 +271,6 @@ body {
 
 .breadcrumb {
   font-size: 12px;
-  line-height: 14px;
   background-color: unset;
 
   > .breadcrumb-item {

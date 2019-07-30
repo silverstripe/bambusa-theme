@@ -2,36 +2,28 @@
 .navbar-dark {
   @include theme-color("nav", "background-color");
 
-  .navbar-nav .nav-link {
-    color: $gray-600;
+  .navbar-nav {
 
-    padding: 26px 0;
-
-    &:first-child {
-      padding-left: 0;
-    }
-
-    &:hover {
-      color: $gray-600;
-    }
-
-    &:link {
-      color: $gray-600;
-
-      &:hover {
-        color: $primary;
-        @include theme-color("accent", "color");
-      }
-    }
-
-    &.current {
-      color: $primary;
-      @include theme-color("accent", "color");
+    .show > .nav-link {
+      @include theme-contrast-color("nav", "color");
     }
   }
 
   .btn-link {
-    @include theme-contrast-color("nav", "color");
+    color: currentColor;
+  }
+
+  .navbar-toggler {
+    border: 0;
+  }
+
+  // Special case for white/light-grey theme
+  .navbar-toggler-icon {
+    body.theme-header-white &,
+    body.theme-header-light-grey &,
+    body.theme-header-default-background & {
+      background: $navbar-light-toggler-icon-bg;
+    }
   }
 }
 
@@ -43,30 +35,48 @@
 
     // Special case for white/light-grey theme
     body.theme-nav-white &,
-    body.theme-nav-light-grey & {
+    body.theme-nav-light-grey &,
+    body.theme-nav-default-background {
       border-bottom: 1px solid $gray-300;
     }
   }
 
-  .navbar-nav {
-    line-height: 19px;
-  }
+  .navbar-nav > .nav-item {
+    @include theme-contrast-color("nav", "color");
 
-  .navbar .navbar-nav > .current > a {
-    background-color: unset;
-    font-weight: bolder;
-    color: $primary;
-
-    &:hover {
-      background-color: unset;
+    &:hover,
+    &:focus {
+      @include theme-accent-or-contrast-color("nav", "color", rgba(255, 255, 255, 0.8));
     }
   }
 
-  .navbar-nav > li > a {
-    @include theme-contrast-color("nav", "color", $gray-400);
+  .navbar-nav > .nav-item > .nav-link {
+    color: currentColor;
 
-    &:hover {
-      @include theme-contrast-color("nav", "color");
+    &:not(.current):hover,
+    &:not(.current):focus {
+      @include theme-accent-or-contrast-color("nav", "color", rgba(255, 255, 255, 0.8));
+    }
+  }
+
+  .navbar-nav .nav-item.current {
+    @include theme-accent-or-contrast-color("nav", "color");
+
+    &:hover,
+    &:focus {
+      @include theme-accent-or-contrast-color("nav", "color");
+    }
+
+    > a {
+      font-weight: $font-weight-bold;
+      color: currentColor;
+      background-color: unset;
+
+      &:focus,
+      &:hover {
+        background-color: unset;
+        color: currentColor;
+      }
     }
   }
 
@@ -84,7 +94,6 @@
     &:hover .navbar-touch-caret,
     &:focus .navbar-touch-caret {
       background-color: transparent;
-      padding: .8rem;
     }
 
     // When active
@@ -92,14 +101,12 @@
       .navbar-touch-caret,
       &:hover .navbar-touch-caret,
       &:focus .navbar-touch-caret {
-        background-color: unset;
-        padding: .8rem;
+        background: unset;
+        color: currentColor;
 
         &:hover,
         &:focus {
           background-color: unset;
-          padding: .8rem;
-          @include theme-color("accent", "background-color");
         }
       }
     }
@@ -140,53 +147,47 @@
     > .dropdown-item:hover,
     > .dropdown-item:active,
     > .dropdown-item:focus {
-      background-color: $primary;
+      @include theme-color("accent", "background-color");
+      @include theme-contrast-color("accent", "color");
     }
   }
 
   // Mobile only
   @include media-breakpoint-down(sm) {
     .navbar-nav {
-      margin: 0;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
     }
 
     .navbar-collapse {
       box-shadow: none;
     }
 
+    .search-container {
+      border-top: 1px solid rgba(255, 255, 255, .5);
+      border-bottom: 1px solid rgba(255, 255, 255, .5);
+
+      // Special case for white/light-grey theme
+      body.theme-header-white &,
+      body.theme-header-light-grey &,
+      body.theme-header-default-background & {
+        border-top: 1px solid $gray-400;
+        border-bottom: 1px solid $gray-400;
+      }
+    }
+
     .navbar {
       .form-inline {
         @include theme-color("header", "background-color");
         margin-top: 0;
-        padding: 1rem 2rem;
+        padding: 1rem 0;
 
         // Special case for white/light-grey theme
         body.theme-header-white &,
-        body.theme-header-light-grey & {
+        body.theme-header-light-grey &,
+        body.theme-header-default-background & {
           border-color: $gray-300;
         }
-      }
-    }
-
-    // Add hover border to left side
-    .nav-item > a,
-    .dropdown-menu a {
-      position: relative;
-
-      &:before {
-        transition: background-color 300ms ease-out;
-        width: $nav-hover-border-width;
-        content: "";
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
-
-      &:hover:before,
-      &:focus:before {
-        background: $primary;
-        @include theme-color("accent", "background-color");
       }
     }
 
@@ -212,24 +213,11 @@
         padding: 0;
       }
 
-      > li > a {
-        color: color-yiq($theme-bg-lighter);
-        display: block;
-
-        @include theme-contrast-color("nav", "color");
-
-        &:active,
-        &:focus,
-        &:hover {
+      > li:not(.active) {
+        > a {
+          display: block;
           @include theme-contrast-color("nav", "color");
         }
-      }
-
-      .active > li > a,
-      .active > li > a:active,
-      .active > li > a:hover,
-      .active > li > a:focus {
-        @include theme-color("accent", "background-color");
       }
     }
   }
@@ -245,23 +233,6 @@
       > .link {
         border-bottom: $nav-hover-border-width solid transparent;
         transition: border-color 300ms ease-out;
-
-        &:focus,
-        &:hover {
-          border-bottom-color: $primary;
-          @include theme-color("accent", "border-bottom-color");
-        }
-      }
-
-      > .current {
-        border-bottom: $nav-hover-border-width solid $primary;
-        @include theme-color("accent", "border-bottom-color");
-
-        &:focus,
-        &:hover {
-          border-bottom-color: $primary;
-          @include theme-color("accent", "border-bottom-color");
-        }
       }
 
       // hide nav item border bottom with dropdown
@@ -282,14 +253,16 @@
       .dropdown-menu > .active > a {
         color: $navbar-dark-active-color;
         @include theme-color("accent", "background-color");
-
       }
     }
 
     // Requires further nesting
     .navbar-nav > .nav-item {
       margin-bottom: -$nav-hover-border-width;
-      margin-right: 28px;
+
+      &:first-child a {
+        padding-left: 0;
+      }
     }
 
     // 1st level with dropdown
@@ -300,19 +273,18 @@
           border-bottom-color: transparent;
         }
       }
-
-      &.current .navbar-touch-caret {
-        border-bottom: $nav-hover-border-width solid $primary;
-        @include theme-color("accent", "border-bottom-color");
-      }
     }
   }
 }
 
 .dropdown-item {
-  &.active,
-  &:active {
-    @include theme-color("accent", "background-color");
+  // Extra specificity to override header link colour set by the theme colour picker
+  body .site-header .dropdown & {
+    color: inherit;
+  }
+
+  .active > & {
+    font-weight: $font-weight-bold;
   }
 }
 
@@ -335,35 +307,6 @@
   &:focus {
     @include theme-color("accent", "background-color", "darken", 10%);
   }
-}
-
-.main {
-  .tags-list {
-    display: flex;
-    flex-wrap: wrap;
-
-    &__tag-item {
-      margin: .5rem;
-    }
-
-    &__tag-link {
-      color: white;
-      text-transform: uppercase;
-      padding: .2rem .5rem;
-      text-decoration: none;
-      font-size: .8rem;
-      background: $primary;
-      border-radius: .5rem;
-
-      &:hover,
-      &:focus,
-      &--current {
-        background: lighten($primary, 10);
-      }
-    }
-
-  }
-
 }
 
 // Desktop only: add menu item hover colour for sub-navigations
