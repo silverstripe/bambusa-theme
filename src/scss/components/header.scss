@@ -35,7 +35,7 @@ body > header {
     .btn.dropdown-toggle {
       display: inline-flex;
       justify-content: center;
-      color: $gray-600;
+      @include theme-contrast-color("header");
       background: none;
       border: 0;
       text-transform: capitalize;
