@@ -749,14 +749,14 @@ $navbar-dark-color:                 rgba($white, .65) !default; // From rgba($wh
 $navbar-dark-hover-color:           rgba($white, .8) !default; // From rgba($white, .75)
 $navbar-dark-active-color:          $white !default;
 $navbar-dark-disabled-color:        rgba($white, .5) !default; // From rgba($white, .25)
-$navbar-dark-toggler-icon-bg:       str-replace(url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='#{$navbar-dark-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"), "#", "%23") !default;
+$navbar-dark-toggler-icon-bg:       str-replace(url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='#{$white}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"), "#", "%23") !default;
 $navbar-dark-toggler-border-color:  rgba($white, .1) !default;
 
 $navbar-light-color:                $charcoal !default; // Original: rgba($black, .65) !default; // From rgba($black, .5)
 $navbar-light-hover-color:          $charcoal !default; // Original: rgba($black, .8) !default; // From rgba($black, .75)
 $navbar-light-active-color:         $charcoal !default; // Original: rgba($black, .95) !default; // From rgba($black, .9)
 $navbar-light-disabled-color:       rgba($black, .5) !default; // From rgba($black, .3)
-$navbar-light-toggler-icon-bg:      str-replace(url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"), "#", "%23") !default;
+$navbar-light-toggler-icon-bg:      str-replace(url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='#{$gray-600}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"), "#", "%23") !default;
 $navbar-light-toggler-border-color: rgba($black, .1) !default;
 
 $navbar-light-brand-color:                $navbar-light-active-color !default;
@@ -1166,7 +1166,7 @@ $fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.7.0/fonts" !default;
 
 // Custom added navbar styles
 $zindex-navbar:                     $zindex-dropdown !default; // - reinstated from BS3.
-$nav-hover-border-width:            0 !default; // Custom Navbar hover border
+$nav-hover-border-width:            4px !default; // Custom Navbar hover border
 
 // Meets 3:1 for large text (if using small text this should meet contrast of 4.5:1 to $carousel-text-color)
 $carousel-mask-bg-color:             rgba(0, 0, 0, 0.4) !default;

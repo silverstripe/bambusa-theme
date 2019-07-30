@@ -43,7 +43,8 @@ $default-theme-colors: (
 
 $default-light-colors: (
   "light-grey",
-  "white"
+  "white",
+  "default-background",
 ) !default;
 
 // Empty map for theme colors, override this in your project to add
@@ -158,6 +159,28 @@ $theme-fonts: map-merge($default-theme-fonts, $custom-theme-fonts) !default;
 @mixin theme-contrast-color($area, $property: "color", $white: #FFF) {
   @each $name, $color in $all-theme-colors {
     body.theme-#{$area}-#{$name} & {
+      @if (index($light-colors, $name) != null) {
+        #{$property}: $body-color;
+      } @else {
+        #{$property}: $white;
+      }
+    }
+  }
+}
+
+// Mixin for providing the accent color, or if this matches the area color, a contrasting color.
+//
+// @param {string} $area - Area or element that this theme colour applies to
+// @param {string} $property ["color"] - You can specify a different CSS property to use when calling the mixin.
+// @param {string} $white [#FFF] - The default light colour that will be used if the area is dark.
+
+@mixin theme-accent-or-contrast-color($area, $property: "color", $white: #FFF) {
+  @each $name, $color in $all-theme-colors {
+    body.theme-accent-#{$name} & {
+      #{$property}: $color;
+    }
+
+    body.theme-accent-#{$name}.theme-#{$area}-#{$name} & {
       @if (index($light-colors, $name) != null) {
         #{$property}: $body-color;
       } @else {

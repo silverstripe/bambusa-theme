@@ -9,8 +9,6 @@ body > header {
 }
 
 .site-header {
-  padding-bottom: 0;
-
   @include theme-contrast-color("header", "color");
 
   a {
@@ -114,18 +112,23 @@ body > header {
   .form-control,
   button[type="submit"] {
     @include form-controls-style();
-    border: 1px solid $gray-600;
+    border: 1px solid rgba(255, 255, 255, 0.5);
 
     // Special case for white/light-grey theme
     body.theme-header-white &,
     body.theme-header-light-grey & {
       background: $input-bg;
-      border-color: $gray-600;
+      border-color: $input-border-color;
     }
 
     &:focus {
       @include outline-focus();
     }
+  }
+
+  // Remove default BS border overlap
+  .input-group-append {
+    margin-left: 0;
   }
 
   .form-control {
@@ -156,16 +159,12 @@ body > header {
 
 .site-header-brand a {
   color: $primary;
-  @include theme-color("accent", "color");
-  font-size: 32px;
-  font-weight: 900;
-  letter-spacing: -1.2px;
-  line-height: 41px;
+  @include theme-accent-or-contrast-color("header", "color");
+  font-weight: $font-weight-bold;
+}
 
-  &:hover {
-    color: $primary;
-    @include theme-color("accent", "color");
-  }
+.site-header-brand-tagline {
+  @include theme-accent-or-contrast-color("header", "color");
 }
 
 // Branding dimension restrictions
@@ -177,21 +176,15 @@ body > header {
 
 // Accessibilty links to navigation
 .skip-links a {
-  color: $navbar-dark-color;
-  background: $theme-bg;
-  @include theme-color("header", "background-color");
+  @include theme-accent-or-contrast-color("header", "color");
 }
 
 // Mobile only
 // Site header
 @include media-breakpoint-down(md) {
-  .site-header {
-    min-height: 93px;
-
-    .site-header-brand {
-      max-width: 19rem;
-      font-size: 1em;
-    }
+  .site-header .site-header-brand {
+    max-width: 19rem;
+    font-size: 1em;
   }
 }
 

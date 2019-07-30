@@ -13,8 +13,8 @@
       <h3 class="h4 page-sidebar-header"><%t Bambusa.TAGS "Browse by tag" %></h3>
       <ul class="list-unstyled tags-list">
         <% loop $BlogPage.Tags %>
-            <li class="tags-list__tag-item <% if $Up.BlogPage.CurrentTag.ID == $ID %>current<% end_if %>">
-                <a title="<%t Bambusa.GOTOTAG 'Go to the &quot;{tag}&quot; tag' tag=$Title %>" href="$Link" class="tags-list__tag-link <% if $Up.BlogPage.CurrentTag.ID == $ID %>tags-list__tag-link--current<% end_if %>">$Title</a>
+            <li <% if $Up.BlogPage.CurrentTag.ID == $ID %>class="current"<% end_if %>>
+                <a class="badge badge-primary" title="<%t Bambusa.GOTOTAG 'Go to the &quot;{tag}&quot; tag' tag=$Title %>" href="$Link"<% if $Up.BlogPage.CurrentTag.ID == $ID %><% end_if %>">$Title</a>
             </li>
         <% end_loop %>
 

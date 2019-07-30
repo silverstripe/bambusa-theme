@@ -44,12 +44,24 @@
     .btn {
       margin-left: $line-height-computed * 0.45;
       margin-right: $line-height-computed * 0.45;
-      @include theme-contrast-color("accent", "color");
 
       @include media-breakpoint-down(sm) {
         margin-bottom: floor($line-height-computed * 0.45);
       }
     }
+
+    &:not(.carousel-has-image) .carousel-secondary-action {
+      @include theme-contrast-color("carousel", "color");
+      border-color: currentColor;
+
+      &:hover {
+        @include theme-contrast-color("carousel", "color", #000);
+      }
+    }
+  }
+
+  .theme-carousel-default-background & a:not(.btn) {
+    color: $carousel-caption-color;
   }
 }
 
@@ -68,7 +80,8 @@
 
   // Custom carousel link style for theme
   a {
-    border-bottom: 1px solid lighten($primary, 20%);
+    border-width: 0 0 1px 0;
+    border-style: solid;
     @include theme-color("accent", "border-bottom-color");
     text-decoration: none;
 
@@ -77,7 +90,7 @@
     }
 
     &:hover {
-      border-bottom: 0;
+      @include theme-color("accent", "border-bottom-color", "lighten", 20%);
     }
   }
 }
@@ -98,7 +111,7 @@
 
 .carousel-controls-inner-wrapper {
   display: inline-flex;
-  background: rgba(0, 0, 0, 0.6);
+  @include theme-color("nav", "background-color");
   border-radius: 2rem;
   padding: 0 #{$spacer - $btn-padding-x-sm} 0 $spacer;
 }
@@ -123,6 +136,7 @@
   &:hover {
     background-color: rgba($gray-600, 0.2);
     cursor: pointer;
+    opacity: 1;
   }
 
   &:focus {
@@ -153,7 +167,8 @@
 
     &::before {
       content: "";
-      background-color: rgb($carousel-caption-color, 0.5);
+      @include theme-contrast-color("nav", "background-color");
+      opacity: $carousel-control-opacity;
       width: 100%;
       margin: 0 $carousel-indicator-spacer;
       height: $carousel-indicator-height;
@@ -164,7 +179,8 @@
     }
 
     &.active::before {
-      background-color: $carousel-caption-color;
+      @include theme-contrast-color("nav", "background-color");
+      opacity: 1;
     }
   }
 }
@@ -174,10 +190,10 @@
   position: relative;
 
   .carousel-controls {
-    color: $carousel-caption-color;
+    @include theme-contrast-color("nav", "color");
 
     &:hover {
-      color: rgba($carousel-caption-color, $carousel-control-hover-opacity);
+      opacity: $carousel-control-hover-opacity;
     }
   }
 }
