@@ -3,8 +3,8 @@
     .theme-banner-block-#{$name} & {
       background: linear-gradient(
         64deg,
-        desaturate(lighten(adjust-hue($color, -26.4%), 6.5%), 38%) 0%,
-        desaturate(lighten(adjust-hue($color, 0%), 21%), 11%) 100%
+        desaturate(lighten(adjust-hue($color, -26.4%), 0%), 38%) 0%,
+        desaturate(lighten(adjust-hue($color, 0%), 21%), 0%) 100%
       );
     }
   }
@@ -69,6 +69,11 @@ a.banner-block {
       max-width: 100%;
     }
 
+    .banner-block__call-to-action-icon {
+      margin-left: .5em;
+      vertical-align: middle;
+    }
+
   }
 
   &__image {
@@ -88,8 +93,11 @@ a.banner-block {
 
   }
 
-  &:hover .banner-block__image-inner {
-    transform: scale(1.1);
+  &:hover,
+  &:focus {
+    .banner-block__image-inner {
+      transform: scale(1.1);
+    }
   }
 
   @include media-breakpoint-down(sm) {

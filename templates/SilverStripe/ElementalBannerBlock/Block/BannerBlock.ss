@@ -14,7 +14,10 @@
         <% end_if %>
         <p>$Content.Summary(30)</p>
         <% if $CallToActionLink.Text %>
-        <span class="banner-block__call-to-action">{$CallToActionLink.Text.XML}</span>
+        <span class="banner-block__call-to-action">
+            {$CallToActionLink.Text.XML}
+            <img class="banner-block__call-to-action-icon" src="$resourceURL('themes/bambusa/images/icon-arrow.svg')" alt="" />
+        </span>
         <% end_if %>
 
     </span>
