@@ -37,9 +37,7 @@
 
         <div class="col-auto order-1 order-md-3 pb-3">
             <a class="col-auto" href="https://www.silverstripe.com/">
-                <img src="$resourceURL('themes/bambusa/images/silverstripe-logo-white.svg')"
-                   alt="<%t CWP.Footer.Logo "Powered by SilverStripe" %>"
-                />
+                <% include SilverStripeLogo %>
             </a>
         </div>
     </div>

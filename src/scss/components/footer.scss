@@ -52,6 +52,10 @@
   a {
     margin-bottom: $spacer;
   }
+
+  .footer-logo__img {
+    @include theme-contrast-color("footer");
+  }
 }
 
 // Desktop only

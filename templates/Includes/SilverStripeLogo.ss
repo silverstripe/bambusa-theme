@@ -1,10 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="134px" height="34px" viewBox="0 0 134 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: sketchtool 55 (78076) - https://sketchapp.com -->
-    <title>68119141-EE72-4A83-ADA4-C83A65552D65</title>
-    <desc>Created with sketchtool.</desc>
+<svg class="footer-logo__img" width="134px" height="34px" viewBox="0 0 134 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <g id="Theme" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Bambusa-homepage" transform="translate(-1169.000000, -1773.000000)" fill="#FFFFFF" fill-rule="nonzero">
+        <g id="Bambusa-homepage" transform="translate(-1169.000000, -1773.000000)" fill="currentColor" fill-rule="nonzero">
             <g id="Bambusa-/-Components-/-Footer-desktop" transform="translate(0.000000, 1644.000000)">
                 <g id="CMS-/-SilverStripe-logo-white" transform="translate(1169.000000, 129.000000)">
                     <g id="SS_logo-name">
