@@ -1,4 +1,5 @@
 <a class="banner-block"
+  aria-labelledby="elemental-block-title-$ID"
   <% if $CallToActionLink.Page.Link %>
   <% with $CallToActionLink %>
   href="{$Page.Link}"
@@ -7,10 +8,10 @@
   <% end_with %>
   <% end_if %>
 >
-<span class="banner-block__flex-box" role="banner">
+<span class="banner-block__flex-box" role="complementary">
     <span class="banner-block__content">
         <% if $Title && $ShowTitle %>
-            <span role="heading" class="banner-block__title h4">$Title</span>
+            <span role="heading" aria-level="2" class="banner-block__title h4" id="elemental-block-title-$ID">$Title</span>
         <% end_if %>
         <p>$Content.Summary(30)</p>
         <% if $CallToActionLink.Text %>
