@@ -279,10 +279,36 @@ body {
     }
 
     &.active {
-      color: $white;
+      color: $gray-500;
 
       &::before {
         color: $white;
+      }
+    }
+  }
+}
+
+.listing__item--search-result {
+  .breadcrumb {
+
+    > .breadcrumb-item {
+
+      a {
+        color: $gray-800;
+      }
+
+      &.active {
+        color: $gray-800;
+
+        &::before {
+          color: $gray-800;
+        }
+      }
+
+      & + .breadcrumb-item {
+        &::before {
+          color: $gray-800;
+        }
       }
     }
   }

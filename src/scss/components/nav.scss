@@ -178,9 +178,12 @@
 
     .navbar {
       .form-inline {
-        @include theme-color("header", "background-color");
         margin-top: 0;
         padding: 1rem 0;
+
+        .input-group {
+          justify-content: center;
+        }
 
         // Special case for white/light-grey theme
         body.theme-header-white &,

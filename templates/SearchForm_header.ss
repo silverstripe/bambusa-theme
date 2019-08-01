@@ -1,6 +1,8 @@
-<form $FormAttributes class="form-inline d-none d-md-block header-search float-right" role="search">
+<form $FormAttributes  role="search">
     <div class="input-group">
-        <input name="Search" aria-label="search" type="text" class="form-control" placeholder="<%t CWP_Search.Placeholder "Search..." %>">
+        <div class="autosuggest" data-locale="$CurrentLocale">
+            <input name="q" value="$Fields.dataFieldByName('q').Value.ATT" aria-label="search" type="text" class="form-control" placeholder="<%t CWP_Search.Placeholder "Search..." %>">
+        </div>
         <div class="input-group-append">
             <button type="submit" class="btn btn-secondary">
                 <i class="fa fa-search" aria-hidden="true"></i>

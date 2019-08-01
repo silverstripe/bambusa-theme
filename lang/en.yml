@@ -5,3 +5,4 @@ en:
     RSS: 'Subscribe to RSS'
     GOTOCATEGORY: 'Go to the &quot;{category}&quot; category'
     GOTOTAG: 'Go to the &quot;{tag}&quot; tag'
+    SEARCHED_FOR: 'You searched for &quot;{query}&quot;'
