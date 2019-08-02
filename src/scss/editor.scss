@@ -22,13 +22,13 @@
   font-family: "Metropolis";
   font-style: normal;
   font-weight: normal;
-  src: local("Metropolis"), url("../../dist/fonts/Metropolis-Regular.woff)") format("woff"), url("../../dist/fonts/Metropolis-Regular.woff)") format("woff2");
+  src: local("Metropolis"), url("../../dist/fonts/Metropolis-Regular.woff") format("woff"), url("../../dist/fonts/Metropolis-Regular.woff") format("woff2");
 }
 @font-face {
   font-family: "Metropolis";
   font-style: normal;
   font-weight: bold;
-  src: local("Metropolis"), url("../../dist/fonts/Metropolis-SemiBold.woff)") format("woff"), url("../../dist/fonts/Metropolis-SemiBold.woff2)") format("woff2");
+  src: local("Metropolis"), url("../../dist/fonts/Metropolis-SemiBold.woff") format("woff"), url("../../dist/fonts/Metropolis-SemiBold.woff2") format("woff2");
 }
 
 body.mce-content-body {
