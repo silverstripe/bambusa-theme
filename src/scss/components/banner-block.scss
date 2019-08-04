@@ -3,7 +3,7 @@
     .theme-banner-block-#{$name} & {
       background: linear-gradient(
         64deg,
-        desaturate(lighten(adjust-hue($color, -26.4%), 0%), 38%) 0%,
+        desaturate(adjust-hue($color, -26.4%), 38%) 0%,
         desaturate(lighten(adjust-hue($color, 0%), 11%), 0%) 100%
       );
     }
