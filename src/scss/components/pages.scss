@@ -23,6 +23,16 @@
       cursor: default;
     }
   }
+
+  ol,
+  ul {
+    margin-bottom: 1.5rem;
+  }
+
+  p + ol,
+  p + ul {
+    margin-top: -0.5rem;
+  }
 }
 
 // General pages
