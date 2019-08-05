@@ -6,7 +6,7 @@ mix.webpackConfig({
   }
 });
 
-mix.js('src/js/main.js', 'dist/js');
+mix.react('src/js/main.js', 'dist/js');
 
 mix
   .sass('src/scss/main.scss', 'dist/css')

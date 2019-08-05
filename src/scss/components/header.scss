@@ -108,34 +108,54 @@ body > header {
 }
 
 // Main site header search
+@include media-breakpoint-up(sm) {
+  .site-header-search {
+    .form-control,
+    button[type="submit"] {
+      @include form-controls-style();
+      border-width: 1px;
+      border-style: solid;
+      border-color: #fff;
+      @include theme-contrast-color("header", "border-color");
+
+      // Special case for white/light-grey theme
+      body.theme-header-white &,
+      body.theme-header-light-grey & {
+        background: $input-bg;
+        border-color: $input-border-color;
+      }
+
+    }
+  }
+}
+@include media-breakpoint-down(sm) {
+  .site-header-search {
+    .form-control,
+    button[type="submit"] {
+      background: transparent;
+      @include theme-contrast-color("nav", "border-color");
+
+      @include theme-contrast-color("nav", "color");
+
+      // Remove default BS border overlap
+      &:focus {
+        @include outline-focus();
+      }
+
+      .input-group-append {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
 .site-header-search {
-  .form-control,
-  button[type="submit"] {
-    @include form-controls-style();
-    border: 1px solid rgba(255, 255, 255, 0.5);
-
-    // Special case for white/light-grey theme
-    body.theme-header-white &,
-    body.theme-header-light-grey & {
-      background: $input-bg;
-      border-color: $input-border-color;
-    }
-
-    &:focus {
-      @include outline-focus();
-    }
-  }
-
-  // Remove default BS border overlap
-  .input-group-append {
-    margin-left: 0;
-  }
-
   .form-control {
     box-shadow: none;
     padding: $input-btn-padding-y-lg $input-btn-padding-x-lg;
     height: auto;
     border-right: 0;
+    border-radius: 2rem 0 0 2rem;
   }
 
   // Search button hover

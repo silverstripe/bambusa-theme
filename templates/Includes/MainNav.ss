@@ -3,9 +3,9 @@
         <div class="container">
             <div class="collapse navbar-collapse" id="navbar-collapse">
                 <div class="d-block d-md-none search-container">
-                    <form class="form-inline" action="/search/SearchForm">
-                        <% include HeaderSearch ExtraClass="col-12 pt-2 pb-2" %>
-                    </form>
+                    <div class="site-header-search col-12 pt-2 pb-2">
+                        $SearchForm
+                    </div>
                 </div>
                 <ul class="nav navbar-nav" role="menubar">
                     <% loop Menu(1) %>
