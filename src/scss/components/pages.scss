@@ -1,13 +1,8 @@
 // Generic page styles
 
 .main {
-  // Add underline to links in general content areas only
-  a {
-    text-decoration: underline;
-  }
-
   // No underlines for certain components
-  .pagination a,
+  a,
   .label,
   .btn,
   .fa {

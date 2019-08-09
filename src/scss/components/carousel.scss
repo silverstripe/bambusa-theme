@@ -8,8 +8,8 @@
 
   // Slides
   .carousel-item {
-    padding-top: $jumbotron-padding * 3;
-    padding-bottom: $jumbotron-padding * 4.5;
+    padding-top: $jumbotron-padding * 2.5;
+    padding-bottom: $jumbotron-padding * 2.5;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -98,7 +98,7 @@
 // Controls wrapper
 .carousel-controls-wrapper {
   position: absolute;
-  bottom: 40px;
+  bottom: 30px;
   // Center
   left: 50%;
   z-index: 2;
