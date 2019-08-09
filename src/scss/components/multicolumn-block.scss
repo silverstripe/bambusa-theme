@@ -27,18 +27,16 @@
     }
 
     .multicolumn-block--2 &,
-    .multicolumn-block--3 &,
-    .multicolumn-block--4 & {
+    .multicolumn-block--3 & {
       @include media-breakpoint-up(md) {
         flex: 0 0 50%;
         max-width: 50%;
       }
     }
 
-    .multicolumn-block--3 &,
-    .multicolumn-block--4 & {
+    .multicolumn-block--3 & {
       @include media-breakpoint-up(lg) {
-        flex: 1 1 0%;
+        flex: 1 1 33%;
         margin-bottom: 0;
         max-width: auto;
       }
