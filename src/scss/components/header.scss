@@ -70,9 +70,13 @@ body > header {
       border-color: $gray-500;
       margin-top: 0;
 
-      // Show focus on all links (override BS)
-      > .active > a:focus {
-        @include outline-focus();
+      > .active {
+        @include theme-contrast-color("accent", "color");
+
+        // Show focus on all links (override BS)
+        > a:focus {
+          @include outline-focus();
+        }
       }
 
       > li > a {
