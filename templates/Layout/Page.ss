@@ -1,6 +1,4 @@
-<% if $HeaderElements %><div class="header-elements">$HeaderElements</div><% end_if %>
 <div class="container">
-    <% if $ParentID != 0 || $URLSegment != 'home' %>
     <div class="row">
         <section class="<% if $Children %>col-lg-12<% else %>col-lg-8 offset-lg-2<% end_if %>">
             <header class="page-header">
@@ -9,7 +7,6 @@
             </header>
         </section>
     </div>
-    <% end_if %>
     <div class="row">
         <section class="content col-lg-8<% if not $Children %> offset-lg-2<% end_if %>">
             <% if $ElementalArea %>
@@ -38,3 +35,4 @@
         <% end_if %>
     </div>
 </div>
+<% include PageUtilities %>

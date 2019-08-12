@@ -72,7 +72,7 @@ body {
   background-color: $primary;
   @include theme-color("accent", "background-color");
   color: $white;
-  margin: 0 -9999rem 50px;
+  margin: 0 -9999rem 0;
   padding: 3.5rem 9999rem;
 
   h1,
@@ -317,4 +317,19 @@ body {
       }
     }
   }
+}
+
+.header-elements {
+  .element-holder:last-child {
+    margin-bottom: 0;
+
+    .carousel {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.content,
+.sidebar {
+  margin-top: 4rem;
 }
