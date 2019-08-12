@@ -1,7 +1,7 @@
 <div class="blog-entry container">
     <% include SilverStripe\\Bambusa\\Pages\\PageHeader HasSidebar=1 %>
     <div class="row">
-        <section class="col-lg-8">
+        <section class="content col-lg-8">
             <article class="blog-post-article">
               <% if $FeaturedImage %>
                   <p class="post-image">$FeaturedImage.ScaleWidth(795)</p>
@@ -17,7 +17,7 @@
               $CommentsForm
             </article>
         </section>
-        <aside class="col-lg-3 offset-lg-1">
+        <aside class="sidebar col-lg-3 offset-lg-1">
           <% include SilverStripe\\Blog\\BlogSideBar BlogPage=$Parent %>
         </aside>
     </div>
