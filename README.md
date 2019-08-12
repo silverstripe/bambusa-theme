@@ -2,14 +2,17 @@
 
 ![Screenshot](docs/images/screenshot.png)
 
+A theme based on Bootstrap 4, using a modified [Watea theme](https://github.com/silverstripe/cwp-watea-theme) as a starting point. It supports a few content blocks, and comes with a language switcher and search box. 
+
+In order to see this theme in action, check the [silverstripe/bambusa-installer](https://github.com/silverstripe/bambusa-installer) project, or create a demo on [silverstripe.com/demo](https://silverstripe.com/demo).
+
 ## Installation
 
-~~Install this theme module with Composer:~~
+Install this theme module with Composer:
 
-~~composer require silverstripeltd/bambusa-theme~~
-
-*Not set up yet*
-
+```
+composer require silverstripeltd/bambusa-theme
+```
 
 ### Development requirements
 
