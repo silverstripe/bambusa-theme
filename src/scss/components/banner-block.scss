@@ -38,7 +38,7 @@ a.banner-block {
     border-radius: 8px;
     display: flex;
     flex-wrap: nowrap;
-    height: 330px;
+    min-height: 330px;
     padding: 0;
     overflow: hidden;
 
@@ -102,6 +102,7 @@ a.banner-block {
       flex-wrap: wrap;
       flex-direction: column-reverse;
       height: auto;
+      min-height: 0;
     }
 
     &__content {
