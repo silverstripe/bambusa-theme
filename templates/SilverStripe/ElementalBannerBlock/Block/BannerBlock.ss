@@ -13,7 +13,7 @@
         <% if $Title && $ShowTitle %>
             <span role="heading" aria-level="2" class="banner-block__title h4" id="elemental-block-title-$ID">$Title</span>
         <% end_if %>
-        <p>$Content.Summary(30)</p>
+        <p>$Content.Plain</p>
         <% if $CallToActionLink.Text %>
         <span class="banner-block__call-to-action">
             {$CallToActionLink.Text.XML}
