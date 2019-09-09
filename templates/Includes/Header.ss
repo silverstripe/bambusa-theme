@@ -20,8 +20,10 @@
             <span class="navbar-toggler-icon"></span>
         </button>
     </div>
+    <% if $HeaderSearchForm %>
     <div class="site-header-search">
         $HeaderSearchForm
     </div>
+    <% end_if %>
     <% include LanguageSelector %>
 </div>
