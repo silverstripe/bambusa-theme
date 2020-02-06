@@ -1,3 +1,4 @@
+<%-- Requires silverstripe/bambusa-fluent --%>
 <% if $Locales %>
     <div class="dropdown float-right language-selector" id="header-language-toggle">
         <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="<%t CWPLanguageSelector.LANGUAGE_SELECTOR "Language selector" %>">
