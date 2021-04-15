@@ -11,7 +11,7 @@ In order to see this theme in action, check the [silverstripe/bambusa-installer]
 Install this theme module with Composer:
 
 ```
-composer require silverstripeltd/bambusa-theme
+composer require silverstripe/bambusa-theme
 ```
 
 ### Development requirements
