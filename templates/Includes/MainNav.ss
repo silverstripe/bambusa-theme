@@ -2,11 +2,13 @@
     <nav class="navbar navbar-expand-md navbar-dark" aria-label="<%t CWP_Theme.MAIN 'Main' %>" role="navigation">
         <div class="container">
             <div class="collapse navbar-collapse" id="navbar-collapse">
+                <% if $SearchForm %>
                 <div class="d-block d-md-none search-container">
                     <div class="site-header-search col-12 pt-2 pb-2">
                         $SearchForm
                     </div>
                 </div>
+                <% end_if %>
                 <ul class="nav navbar-nav" role="menubar">
                     <% loop Menu(1) %>
                         <li role="menuitem" class="nav-item $FirstLast $LinkingMode<% if $LinkingMode = current %> active<% end_if %><% if $Children %> dropdown <% end_if %>">
