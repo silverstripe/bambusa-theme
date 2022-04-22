@@ -1,0 +1,29 @@
+.accordion {
+  &.ui-accordion {
+    .ui-accordion-header {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 5rem;
+      background: $gray-300;
+      font-size: 18px;
+      padding: 0.8rem 2rem;
+      border-color: transparent;
+      line-height: 1;
+      margin: 0 -0.3rem 1rem -0.3rem; // Overhang for the curvature
+
+      &-active {
+        background-color: $primary;
+      }
+    }
+
+    .ui-accordion-header-icon {
+      margin-top: 0;
+    }
+
+    .ui-accordion-content {
+      border: 0;
+    }
+  }
+}

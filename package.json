@@ -19,6 +19,7 @@
   "dependencies": {
     "debounce": "^1.2.0",
     "ismobilejs": "^0.5.2",
+    "jquery-ui": "^1.13.1",
     "laravel-mix": "^4.0",
     "path": "^0.12.7",
     "prop-types": "^15.7.2",
