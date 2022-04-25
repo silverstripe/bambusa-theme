@@ -1,4 +1,20 @@
 .accordion {
+  &.ui-widget {
+    font-family: inherit;
+  }
+
+  h3 {
+    font-weight: normal;
+
+    &.ui-state-default {
+      color: inherit;
+    }
+
+    &.ui-state-active {
+      color: $white;
+    }
+  }
+
   &.ui-accordion {
     .ui-accordion-header {
       display: flex;
@@ -10,7 +26,7 @@
       font-size: 18px;
       padding: 0.8rem 2rem;
       border-color: transparent;
-      line-height: 1;
+      line-height: inherit;
       margin: 0 -0.3rem 1rem -0.3rem; // Overhang for the curvature
 
       &-active {
