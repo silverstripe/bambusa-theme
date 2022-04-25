@@ -54,7 +54,6 @@
 @import "~jquery-ui/themes/base/all.css";
 @import "utils/jquery-ui-icons";
 
-
 // Starter theme Mixins
 @import "../../../starter/src/scss/utils/mixins";
 
@@ -95,3 +94,4 @@
 @import "./components/banner-block";
 @import "./components/autosuggest";
 @import "./components/accordion";
+@import "./components/decision-tree";
