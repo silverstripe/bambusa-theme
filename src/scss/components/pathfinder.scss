@@ -1,0 +1,53 @@
+.pathfinder {
+  padding-top: 50px;
+  padding-bottom: 30px;
+
+  &__result-content {
+    margin-bottom: 10px;
+  }
+
+  &__results {
+    margin-bottom: 30px;
+  }
+
+  #Answers .form-group {  // sass-lint:disable-line no-ids
+    margin-bottom: 10px;
+  }
+
+  [data-role="nesting-parent"] {
+    display: flex;
+    padding: 13px 20px;
+    background: $gray-200;
+    border-radius: 50px;
+    align-items: center;
+
+    &.form-group--no-label {
+      border-radius: 10px;
+    }
+
+    label {
+      margin-bottom: 0;
+      cursor: pointer;
+      flex-grow: 1;
+      margin-left: 10px;
+
+      &.radionestedsubset-label-with-children {
+        margin-left: 0;
+      }
+    }
+
+    .form-group {
+      margin-bottom: 0 !important; // sass-lint:disable-line no-important
+    }
+
+    .form-check-inline {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
