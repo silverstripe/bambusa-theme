@@ -1,4 +1,8 @@
-<div class="decision-tree" data-page-progression="<% if $Layout == 'Multiple' %>multiple<% else %>single<% end_if %>">
+<div
+    class="decision-tree"
+    data-page-progression="<% if $Layout == 'Multiple' %>multiple<% else %>single<% end_if %>"
+    data-first-step="$FirstStep.ID"
+>
     <div class="decision-tree__header">
         <% if $Title && $ShowTitle %>
             <h2 class="accordion__title">$Title</h2>

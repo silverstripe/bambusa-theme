@@ -40,6 +40,11 @@ jQuery(document).ready(($) => {
 
     // Show current step
     $step.showStep();
+
+    // Reset focus?
+    if ($(this).data('first-step') === $step.data('step')) {
+      $step.find('input').first().focus();
+    }
   };
 
   /**

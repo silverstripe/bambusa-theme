@@ -1,3 +1,4 @@
+<% include PathfinderFocus %>
 <div class="pathfinder__results">
     <div class="pathfinder__result-content">
         <% if $Results %>
