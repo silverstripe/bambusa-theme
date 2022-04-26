@@ -36,6 +36,7 @@
         <% if $SiteConfig.BannerBlockBackground %>theme-banner-block-{$SiteConfig.BannerBlockBackground}<% end_if %>">
 
         <header class="header" role="banner">
+            <% include SiteBanners %>
             <% include Header %>
             <% include MainNav %>
         </header>

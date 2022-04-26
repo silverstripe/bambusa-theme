@@ -1,0 +1,48 @@
+.site-banner {
+  margin-bottom: 5px;
+  border-width: 1px 0 1px 0;
+  border-style: solid;
+  border-color: $gray-700;
+  color: $gray-700;
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+
+  &--info {
+    background: rgba($info, 0.15);
+    border-color: $info;
+  }
+
+  &--warning {
+    background: rgba($warning, 0.15);
+    border-color: $warning;
+  }
+
+  &--alert {
+    background: rgba($danger, 0.15);
+    border-color: $danger;
+  }
+
+  &__layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &__close {
+    flex-shrink: 1;
+    margin-left: 15px;
+    border: 0;
+    background: none;
+    width: 30px;
+    height: 30px;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 0;
+    color: $gray-700;
+  }
+}
