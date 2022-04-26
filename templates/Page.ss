@@ -41,7 +41,9 @@
             <% include MainNav %>
         </header>
         <main id="main" class="main" role="main">
+            <a id="top" tabindex="-1"></a>
             $Layout
+            <% include PageUtilities %>
         </main>
         <% include PageShowcase %>
         <footer class="footer-site" role="contentinfo">
