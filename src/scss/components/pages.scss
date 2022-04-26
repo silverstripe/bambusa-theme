@@ -274,13 +274,18 @@ body {
   }
 }
 
-.breadcrumb {
+body.theme-link-default-accent .breadcrumb {
   font-size: 12px;
   background-color: unset;
 
   > .breadcrumb-item {
     a {
       color: $white;
+
+      &:hover {
+        text-decoration: underline;
+        text-underline-offset: 0.2em; // sass-lint:disable-line no-misspelled-properties
+      }
     }
 
     &.active {
