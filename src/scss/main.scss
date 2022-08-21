@@ -50,6 +50,10 @@
 @import "../../../starter/node_modules/bootstrap/scss/utilities";
 @import "../../../starter/node_modules/bootstrap/scss/print";
 
+// jQuery
+@import "~jquery-ui/themes/base/all.css";
+@import "utils/jquery-ui-icons";
+
 // Starter theme Mixins
 @import "../../../starter/src/scss/utils/mixins";
 
@@ -89,3 +93,10 @@
 @import "./components/pagination";
 @import "./components/banner-block";
 @import "./components/autosuggest";
+@import "./components/accordion";
+@import "./components/decision-tree";
+@import "./components/site-banner";
+@import "./components/social-bar";
+@import "./components/pathfinder";
+@import "./components/page-utilities";
+@import "./components/navigation-banner";

@@ -36,11 +36,14 @@
         <% if $SiteConfig.BannerBlockBackground %>theme-banner-block-{$SiteConfig.BannerBlockBackground}<% end_if %>">
 
         <header class="header" role="banner">
+            <% include SiteBanners %>
             <% include Header %>
             <% include MainNav %>
         </header>
         <main id="main" class="main" role="main">
+            <a id="top" tabindex="-1"></a>
             $Layout
+            <% include PageUtilities %>
         </main>
         <% include PageShowcase %>
         <footer class="footer-site" role="contentinfo">
@@ -49,7 +52,6 @@
 
         $ModalWindow
 
-        <% require javascript('//code.jquery.com/jquery-3.3.1.min.js') %>
         <% require javascript('themes/starter/dist/js/main.js') %>
         <% require javascript('themes/bambusa/dist/js/main.js') %>
         <% include GoogleAnalytics %>

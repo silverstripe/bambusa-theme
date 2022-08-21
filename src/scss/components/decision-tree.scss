@@ -1,0 +1,67 @@
+.decision-tree {
+  .decision-tree-step {
+    &--hidden {
+      display: none;
+    }
+
+    &__form {
+      &--loading {
+        opacity: 0.7;
+      }
+
+      &--hidden {
+        display: none;
+      }
+    }
+
+    &__fieldset {
+      margin-bottom: 10px;
+    }
+
+    &__actions {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .step form {
+    margin-bottom: 30px;
+  }
+
+  .step-options {
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      padding: 13px 20px;
+      background: $gray-200;
+      margin-bottom: 10px;
+      border-radius: 50px;
+
+      label {
+        margin-bottom: 0;
+        margin-left: 8px;
+        font-size: 18px;
+        flex-grow: 1;
+        font-weight: 400;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .step-option {
+    &--hidden {
+      display: none;
+    }
+  }
+
+  .step--result {
+    border: 1px solid $gray-400;
+    padding: 30px;
+    background: $gray-100;
+    border-radius: 3px;
+  }
+}

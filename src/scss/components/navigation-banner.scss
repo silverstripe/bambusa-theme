@@ -1,0 +1,56 @@
+.navigation-banner {
+  &__banner {
+    padding: 80px 0;
+    background-size: cover;
+    background-color: $gray-600;
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: 30px;
+
+    h1,
+    .h1,
+    h2,
+    .h2,
+    h3,
+    .h3,
+    h4,
+    .h4,
+    h5,
+    .h5,
+    h6,
+    .h6,
+    p {
+      color: $white;
+      text-shadow: 0 0 40px $black;
+    }
+  }
+
+  &__item,
+  a.navigation-banner__item {
+    display: flex;
+    padding: 15px;
+    margin: 15px 0;
+    width: 100%;
+    aspect-ratio: 1; // sass-lint:disable-line no-misspelled-properties
+    background: rgba($white, 0.85);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: $gray-600;
+    font-size: $font-size-lg;
+    border-radius: 5px;
+    box-shadow: 0 0 15px $gray-700;
+
+    &:hover {
+      background: $primary;
+      color: $white;
+    }
+  }
+}
+
+body.theme-link-default-accent a.navigation-banner__item {
+  color: $gray-600;
+}

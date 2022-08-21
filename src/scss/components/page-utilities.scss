@@ -1,0 +1,29 @@
+.page-utilities {
+  &__btn {
+    color: $gray-700;
+    margin: 0 0.25rem;
+
+    .fa {
+      font-size: 110%;
+    }
+
+    &:hover,
+    &:active {
+      text-decoration: underline;
+      background: transparent;
+      border-color: $primary;
+
+      .fa {
+        color: $primary;
+      }
+    }
+  }
+
+  .btn-outline-secondary:not(:disabled):not(.disabled):active {
+    &:active {
+      background: transparent;
+      border-color: $primary;
+      color: $primary;
+    }
+  }
+}
